@@ -141,7 +141,7 @@
 </div>
 <!-- ======cart5========== -->
 <div class="carts">
-    <h1 style="text-align:center;padding-top:20px;">Mudra/Govt. Subsidy Loan</h1>
+    <h1 style="text-align:center;padding-top:20px;">Mudra Loan</h1>
     <div class="cart1">
         <img style="border-radius:10px;width:390px;height:300px;" src="./images/mudra_loan.png" alt="personal loan Image">
         <pre style="padding-left:75px;font-size:22px;">
@@ -197,6 +197,27 @@
         education loans accessible to a broad range of 
         students seeking academic advancement.
         <button class="btn" onclick="window.location.href = './pages/education_loan.php'">Apply</button>
+    </pre>
+</div>
+</div>
+
+<!-- ======cart8========== -->
+<div class="carts">
+    <h1 style="text-align:center;padding-top:20px;">Govt. Subsidy loans</h1>
+    <div class="cart1">
+        <img style="border-radius:10px;width:390px;height:300px;" src="./images/govt_loan.png" alt="personal loan Image">
+        <pre style="padding-left:75px;font-size:22px;">
+            
+        Education loans in India are financial products 
+        designed to assist students in funding their 
+        higher education expenses. Offered by banks and 
+        financial institutions, these loans cover tuition 
+        fees, living expenses, and other educational costs. 
+        Typically, repayment starts after the completion of 
+        the course. Interest rates and terms vary, making 
+        education loans accessible to a broad range of 
+        students seeking academic advancement.
+        <button class="btn" onclick="window.location.href = './pages/education_loan.php'">View More</button>
     </pre>
 </div>
 </div>

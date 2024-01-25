@@ -38,7 +38,7 @@
 </head>
 <body>
 <?php    
-    require($SITE_NAME . "header.php");
+    require("../header.php");
 ?>
 <br>
 <div class="policy">

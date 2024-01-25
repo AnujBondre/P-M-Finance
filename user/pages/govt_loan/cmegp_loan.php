@@ -35,12 +35,12 @@
 </head>
 <body>
 <?php
-    require("../header.php");
+    require("../../header.php");
 ?>
 <br>
 <div class="policy">
-    <h1>Home Loan</h1>
-    <img class="l_image" src="../images/home_loan.png">
+    <h1>CMEGP Loan</h1>
+    <img class="l_image" src="../../images/cmegp_loan.png">
     <pre style= "padding-top:10px;line-height: 1.5; font-family: Calibri;">
 
     Medical emergency or wedding. You can easily apply for an ICICI Bank Personal 
@@ -72,11 +72,11 @@
     </pre>
 </div>
 <?php
-    require("./apply_loan_form.php");
+    require("../apply_loan_form.php");
 ?>
 <br>
 <?php
-    require("../footer.php");
+    require("../../footer.php");
 ?>
 </body>
 </html>
