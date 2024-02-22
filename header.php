@@ -1,9 +1,6 @@
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-<title>dropdown Menu</title>
+<?php
+    $site_url = "http://localhost/P-M-Finance-1";
+?>
 <style>
     * {
         margin: 0;
@@ -15,14 +12,14 @@
         font-family: sans-serif;
     }
     .logo{
-            width: 6%;
-            height: 85%;
-            margin-left: 20px;
-            margin-top: 6px;
-            border-radius: 25px;
+        width: 5%;
+        height: 80%; 
+        margin-left: 1.5vw;
+        margin-top: 0.3vh;
+        border-radius: 20%;
     }
     .menu-bar {
-        background-color: #3498db;
+        background-color: #1e465f;
         height: 80px;
         width: 100%;
         display: flex;
@@ -46,7 +43,7 @@
         text-decoration: none;
     }
     .menu-bar ul li a:hover {
-        color: black;
+        color: #8fa3af;
     }
     .fas {
         float: right;
@@ -61,7 +58,7 @@
         position: absolute;
         left: 0;
         top: 100%;
-        background-color: #3498db;
+        background-color: #1e465f;
     }
     .menu-bar ul li:hover .dropdown-menu ul {
         display: block;
@@ -79,52 +76,50 @@
         position: absolute;
         left: 220px;
         top: 0;
-        background-color: #3498db;
+        background-color: #1e465f;
     }
 </style>
-<script>
-        function scrollPage() {
-      window.scrollBy({
-        top: 4995,
-        left: 0,
-        behavior: 'smooth'});
-    }
-</script>
-</head>
+
 <body>
     <div class="menu-bar">
-      <img src="./images/ax.png" class="logo">
+      <img src="<?php echo $site_url ?>/images/logo.jpg" class="logo">
       <ul>
-        <li><a href="./index.php">Home</a></li>
+        <li><a href="<?php echo $site_url ?>/index.php">Home</a></li>
         <li><a>Loans <i class="fas fa-caret-down"></i></a>
 
             <div class="dropdown-menu">
                 <ul>
-                  <li><a href="./pages/personal_loan.php">Personal Loan</a></li>
-                  <li><a href="./pages/business_loan.php">Business Loan</a></li>
-                  <li><a href="./pages/instant_loan.php">Instant Loan</a></li>
-                  <li><a href="./pages/home_loan.php">Home Loan</a></li>
-                  <li><a href="./pages/mortgage_loan.php">Mortgage Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/personal_loan.php">Personal Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/business_loan.php">Business Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/instant_loan.php">Instant Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/home_loan.php">Home Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/mortgage_loan.php">Mortgage Loan</a></li>
                   <li>
                     <a href="#">Govt. Subsidy Loan <i class="fas fa-caret-right"></i></a>
                     <div class="dropdown-menu-1">
                       <ul>
-                        <li><a href="./pages/govt_loan/pmegp_loan.php">PMEGP Loan</a></li>
-                        <li><a href="./pages/govt_loan/cmegp_loan.php">CMEGP Loan</a></li>
+                        <li><a href="<?php echo $site_url ?>/pages/govt_loan/pmegp_loan.php">PMEGP Loan</a></li>
+                        <li><a href="<?php echo $site_url ?>/pages/govt_loan/cmegp_loan.php">CMEGP Loan</a></li>
                       </ul>
                     </div>
                   </li>
-                  <li><a href="./pages/mudra_loan.php">Mudra Loan</a></li>
-                  <li><a href="./pages/project_loan.php">Project Loan</a></li>
-                  <li><a href="./pages/education_loan.php">Education Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/mudra_loan.php">Mudra Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/project_loan.php">Project Loan</a></li>
+                  <li><a href="<?php echo $site_url ?>/pages/education_loan.php">Education Loan</a></li>
                 </ul>
               </div>
         </li>
         <li><a onclick="scrollPage()" href="#">Lending Partners</a></li>
-        <li><a href="./about_us.php">About Us</a></li>
-        <li><a href="./enquiry_form.php">Enquiry Form</a></li>
-        <li><a href="./privacy_policy.php">Privacy Policy</a></li>
+        <li><a href="<?php echo $site_url ?>/about_us.php">About Us</a></li>
       </ul>
     </div>
+
+    <script>
+        function scrollPage() {
+            window.scrollBy({
+            top: 4995,
+            left: 0,
+            behavior: 'smooth'});
+    }
+    </script>
 </body>
-</html>

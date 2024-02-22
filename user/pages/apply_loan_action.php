@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Upload files to a folder on the server (adjust the path as needed)
-    $uploadFolder = "uploads/";
+    $uploadFolder = "../../admin/uploads/";
     $errors = [];
 
     // Function to handle file upload and check for errors
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($sql)) {
         if ($conn->query($sql) === TRUE) {
             echo "Application submitted successfully!";
-            header("Location: Apply_list.php");
+            header("Location: ./Apply_list.php");
             exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

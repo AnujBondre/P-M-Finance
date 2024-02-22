@@ -29,7 +29,8 @@
         }
 
         th {
-            background-color: #BB84E9;
+            background-color: #3498db;
+            color: #fff;
         }
 
         .view-button {
@@ -40,15 +41,15 @@
             cursor: pointer;
             border: 1px solid #bbb;
             border-radius: 20px;
-            background-color: #BB84E9;
+            background-color: #3498db;
             color: white;
         }
 
         .view-button:hover {
-            background-color: #4CAF50;
+            background-color: #2c648a;
         }
         .navbar {
-            background-color: #BB84E9;
+            background-color: #3498db;
             color: #fff;
             padding: 15px;
             display: flex;
@@ -118,7 +119,7 @@
         }
 
         .logout-button {
-            background-color: #BB84E9;
+            background-color: #3498db;
             color: #fff;
             padding: 12px 20px;
             border: none;
@@ -130,7 +131,7 @@
         }
 
         .logout-button:hover {
-            background-color: #F4B382;
+            background-color: #2c648a;
         }
 
         .logout-button a {
@@ -139,9 +140,9 @@
         }
         .styled-button {
         padding: 12px 20px; 
-        background-color: #BB84E9;
+        background-color: #3498db;
         color: white;
-        border: 2px solid #BB84E9; 
+        border: none; 
         border-radius: 20px; 
         cursor: pointer;
         font-size: 16px;
@@ -149,16 +150,13 @@
     }
 
     .styled-button:hover {
-        background-color: #4CAF50;
+        background-color: #2c648a;
         color: #fff; 
         border-color: #4CAF50; 
     }
     .styled-button a {
         color: inherit; 
         text-decoration: none; 
-    }
-    .styled-button:hover a {
-        color: #fff; 
     }
     .table-container {
             width: 90%;
@@ -174,9 +172,7 @@
         border-collapse: collapse;
         padding: auto;
     }
-    tr:hover {
-            background-color: #e0e0e0;
-        }
+    
     </style>
 </head>
 <body>

@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Document</title>
+<?php
+    $site_url = "http://localhost/P-M-Finance-1";
+?>
     <style>
-    *{
-        margin:0px;
-        padding:0px;
-        font-family: Calibri;
-    }
     .container {
-        max-width: 600px;
-        margin: 50px auto;
+        max-width: 30vw;
+        margin: 1.7%;
+        margin-left: 68%;
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
@@ -22,13 +13,13 @@
     }
     label {
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
     input,
     select {
         width: 100%;
         padding: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         box-sizing: border-box;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -46,6 +37,7 @@
         background-color: #45a049;
     }
     </style>
+
 <script>
     function redirectToNewPage() {
         var designation = document.getElementById("desig").value;
@@ -61,17 +53,24 @@
         }
 
         window.location.href = redirectPage;
+        function fillCurrentDate() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+            document.getElementById("loanDate").value = today;
+        }
     }
 </script>
-</head>
+
 <body>
-<?php
-    require("./header.php");
-?>
+
 <div class="container">
     <h2>Enquiry Form</h2>
     <br>
-    <form action="enquiry_action.php" method="post">
+    <form action="<?php echo $site_url ?>/enquiry_action.php" method="post">
 
         <input type="text" id="id" name="id" required disabled hidden>
 
@@ -105,12 +104,9 @@
         <label for="loanAmount">Loan Amount:</label>
         <input type="number" id="loanAmount" name="loanAmount" required>
 
+        <input type="hidden" name="hiddenLoanDate" value="<?php echo date("d/m/Y"); ?>">
         <button type="submit">Submit</button>
     </form>
 </div>
-<?php
-    require("./footer.php");
-?>
+
 </body>
-</html>
-<!-- ============================================================================== -->

@@ -27,8 +27,8 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        button {
-            background-color: #4caf50;
+        .btu{
+            background-color: #3498db;
             color: #fff;
             padding: 12px 20px;
             border: none;
@@ -49,8 +49,7 @@
     <form action="apply_loan_action.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
         <!-- Include your form fields here based on the structure in your original form -->
         <!-- Ensure that the input names match those used in your PHP script -->
-        <label for="id">Id:</label>
-        <input type="text" id="id" name="id" required disabled>
+        <input type="text" id="id" name="id" hidden>
 
         <label for="fullName">Full Name:</label>
         <input type="text" id="fullName" name="fullName" required>
@@ -66,6 +65,7 @@
 
         <label for="loanType">Loan Type:</label>
         <select id="loanType" name="loanType" required>
+            <option>Select</option>
             <option value="businessLoan">Business Loan</option>
             <option value="personalLoan">Personal Loan</option>
             <option value="homeLoan">Home Loan</option>
@@ -79,6 +79,8 @@
 
         <label for="loanAmount">Loan Amount:</label>
         <input type="number" id="loanAmount" name="loanAmount" required>
+
+        <input type="hidden" name="hiddenLoanDate" value="<?php echo date("d/m/Y"); ?>">
 
         <label for="pancard">Pan Card (Max size: 10 MB):</label>
         <input type="file" id="pancard" name="pancard" required>
@@ -109,7 +111,7 @@
             <input type="file" id="salaryslip" name="salaryslip">
         </div>
 
-        <input type="submit" value="Submit">
+        <input class="btu" type="submit" value="Submit">
     </form>
 </div>
 
@@ -140,14 +142,15 @@
             var file = fileInput.files[0];
 
             // Check if a file is selected
-            if (file) {
-                // Check if the file is an image (you can extend this check based on your requirements)
-                var isImage = file.type.startsWith('image/');
+        if (file) {
+            // Check if the file is an image or PDF (you can extend this check based on your requirements)
+            var isImage = file.type.startsWith('image/');
+            var isPDF = file.type === 'application/pdf';
 
-                if (!isImage) {
-                    alert('Please select a valid image file.');
-                    return false;
-                }
+            if (!isImage && !isPDF) {
+                alert('Please select a valid image or PDF file.');
+                return false;
+            }
 
                 // Check file size
                 if (file.size > maxFileSize) {

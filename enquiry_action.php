@@ -19,14 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = mysqli_real_escape_string($conn, $_POST["address"]);
     $loanType = mysqli_real_escape_string($conn, $_POST["loanType"]);
     $loanAmount = mysqli_real_escape_string($conn, $_POST["loanAmount"]);
-
+    $loanDate = mysqli_real_escape_string($conn, $_POST["hiddenLoanDate"]); 
 
     // Insert data into the database
-    $sql = "INSERT INTO `client_data`( `Full name`, `Email Address`, `Phone Number`, `Address`, `Loan Type`, `Loan Amount`) VALUES ('$fullName', '$email', '$phone', '$address', '$loanType', '$loanAmount')";
+    $sql = "INSERT INTO `client_data`(`Full name`, `Email Address`, `Phone Number`, `Address`, `Loan Type`, `Loan Amount`,`loanDate`)
+    VALUES ('$fullName', '$email', '$phone', '$address', '$loanType', '$loanAmount' , '$loanDate')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Application submitted successfully!";
-        // header("location:Dashboard.php");
+        echo "<script>alert('Application submitted successfully!'); window.location.href='enquiry_form.php'; </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
